@@ -27,22 +27,22 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  result = ""
+  # result = ""
   data.each do |season, contestants|
     contestants.each do |hash|
       if hash.values.include?(hometown)
-        result = hash["occupation"]
+        hash["occupation"]
       end
     end
   end
-  result
+  # result
 end
 
 def get_average_age_for_season(data, season)
   sum = 0
   counter = 0
   data[season].each do |hash|
-    sum += hash["age"].to_i
+    sum += (hash["age"].to_i)
     counter += 1
   end
   sum / counter
