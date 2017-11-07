@@ -31,7 +31,7 @@ def get_occupation(data, hometown)
   data.each do |season, contestants|
     contestants.each do |hash|
       if hash.values.include?(hometown)
-        hash["occupation"]
+        return hash["occupation"]
       end
     end
   end
